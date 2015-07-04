@@ -10,7 +10,7 @@
  * se encarga de hacer la constante actualización de recursos en el sistema cada vez que el usuario entra al juego
 */
 
-include('core/buildable/production.Mines.php');
+require('core/buildable/production.Mines.php');
 
 class Resources extends Mines {
     
