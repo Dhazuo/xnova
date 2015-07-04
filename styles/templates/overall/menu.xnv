@@ -1,0 +1,22 @@
+{include 'overall/header.xnv'}
+<div id="leftmenu">
+<aside id="header">
+    <a href="?core=messages"><div id="mensajes_menu"></div></a>
+        <div id="mensajes_menu_cant">(0)</div>
+        <div id="hora"></div>
+</aside>
+<aside id="menu">
+<ul id="botones">
+<a href="?core=universe"><li><p>{$m_universo}</li></p></a>
+<a href="?core=fleets"><li><p>{$m_flotas}</li></p></a>
+<a href="?core=alliances"><li><p>{$m_alianzas}</li></p></a>
+<a href="?core=bank"><li><p>{$m_banco}</li></p></a><!-- -->
+<a href="?core=shop"><li><p>{$m_tienda}</li></p></a>
+<div class="separador"></div>
+<a href="?core=stats"><li><p>{$m_estadisticas} ({$m_top})</li></p></a>
+<a href="?core=settings"><li><p>{$m_configuracion}</li></p></a>
+</ul>
+</aside>
+<aside id="foot_menu"></aside>
+    <a href="?core=xnova" target="_blank"><div id="notas_version">XNOVA V0.1</div></a>
+</div>

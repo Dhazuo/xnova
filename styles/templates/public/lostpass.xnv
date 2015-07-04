@@ -1,0 +1,7 @@
+{include 'overall/header.xnv'}  
+        <div id="error"></div>
+        <form action="index.php?modo=claveperdida" method="POST" id="clave_perdida">
+            <label>{$x_email} </label><input type="text" name="email" />
+            <input type="submit" value="{$x_submit}" id="dalelaclavexd" />
+        </form>
+{include 'overall/footer.xnv'}

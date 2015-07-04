@@ -1,0 +1,3 @@
+<div id="abastecimiento_bg">
+    <div class="titulo">{{ m_abastecimiento|upper }}</div>
+    <div id="abastecimiento_bg_inter">

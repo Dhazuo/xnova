@@ -1,0 +1,9 @@
+  </div>
+</div>
+<div id="abastecimiento_log"></div>
+
+<div id="cola_actual">
+    <div class="colas_edif"></div>
+</div>
+
+{% include 'overall/footer.xnv' %}

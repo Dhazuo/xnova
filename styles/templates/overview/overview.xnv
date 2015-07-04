@@ -1,0 +1,5 @@
+
+    {$smarty.session.user} inicio de sesión correcto y el email es {$usuario_email}, la facción es {$usuario_faccion} y tiene {$usuario_puntos} puntos está en el top {$usuario_top} de {$total_rank}<br />
+    Planeta {$nombre_planeta} ubicado en [{$p}:{$s}], actualmente ({$campos}) campos usados en una extensión de {$diametro }km la temperatura es {$temperatura} y la imagen {$imagen_planeta}<br />
+
+{include 'overall/footer.xnv'}

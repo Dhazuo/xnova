@@ -1,0 +1,16 @@
+</div><!-- end paginas -->
+</div><!-- end cuerpo-->
+<footer>
+    <div id="footer">
+    <div id="copyright">0.1 &copy; 2015 Xnova Revolution. Todos los derechos reservados.</div>
+    <div id="foot_enlaces">
+        <a href="http://www.xnovarev.net/foro/" target="_blank">Foro</a> | 
+        <a href="?core=support">Soporte</a> | 
+        <a href="?core=rules">Reglas</a>
+        {if isset($smarty.session.user)} | <a href="?core=logout" style="color: #841e2c">Salir</a>{/if}
+    </div>
+    </div>    
+</footer>
+<script src="styles/xnova/js/jquery.simplePopup.js" type="text/javascript"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Xnova</title>
+    <meta charset="utf-8" />
+    <link href="styles/xnova/css/general.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="styles/xnova/css/tipped.css" media="all" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <script src="styles/xnova/js/jquery.js"></script>
+    <script src="styles/xnova/js/tipped.js"></script>
+    <script src="styles/xnova/js/xnova.ajax.js"></script>
+</head>
+<body>
+<div id="particles-js"></div>
+<script src="styles/xnova/js/particles.js"></script>
+<script src="styles/xnova/js/app.js"></script> 
+<div id="cuerpo">

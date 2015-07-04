@@ -1,0 +1,39 @@
+<nav id="topnav">
+    
+        <aside id="botones_topnav">
+            <ul>
+                <a href="?core=overview"><li class="tooltipted boton_topnav vision_general" title="{$m_general}"></li></a>
+                <a href="?core=provision"><li class="tooltipted boton_topnav abastecimiento" title="{$m_abastecimiento}"></li></a>
+                <a href="?core=facilities"><li class="tooltipted boton_topnav infraestructuras" title="{$m_infraestructura}"></li></a>
+                <a href="?core=tecnology"><li class="tooltipted boton_topnav tecnologia" title="{$m_tecnologia}"></li></a>
+                <a href="?core=hangar"><li class="tooltipted boton_topnav hangar" title="{$m_hangar}"></li></a>
+                <a href="?core=bunker"><li class="tooltipted boton_topnav defensas" title="{$m_defensas}"></li></a>
+            </ul>
+        </aside>
+
+        <div class="tooltipted recursos metal_img" title="{$x_metal} <hr> <table style='font-size:8pt;'><tr><td style='color: #375fb2'>{$x_actual}: </td> <td class=valor>{$metal}</td></tr> <tr><td style='color: #375fb2'>{$x_capacidad}: </td> <td class=valor>{$almacen_metal}</td></tr>"></div>
+        <div class="nombre_recurso metal">{$x_metal}</div>
+        <div class="cantidad_recurso metal">{$metal}</div> 
+    
+        <div class="tooltipted recursos cristal_img" title="{$x_cristal} <hr> <table style='font-size:8pt;'><tr><td style='color: #375fb2'>{$x_actual}: </td> <td class=valor>{$cristal}</td></tr> <tr><td style='color: #375fb2'>{$x_capacidad}: </td> <td class=valor>{$almacen_cristal}</td></tr>"></div>
+         <div class="nombre_recurso cristal">{$x_cristal}</div>
+        <div class="cantidad_recurso cristal">{$cristal}</div> 
+    
+        <div class="tooltipted recursos tritio_img" title="{$x_tritio} <hr> <table style='font-size:8pt;'><tr><td style='color: #375fb2'>{$x_actual}: </td> <td class=valor>{$tritio}</td></tr> <tr><td style='color: #375fb2'>{$x_capacidad}: </td> <td class=valor>{$almacen_tritio}</td></tr>"></div>
+         <div class="nombre_recurso tritio">{$x_tritio}</div>
+        <div class="cantidad_recurso tritio">{$tritio}</div>
+    
+        <div class="tooltipted recursos energia_img" title="{$x_energia} <hr> <table style='font-size:8pt;'><tr><td style='color: #375fb2'>{$x_produccion}: </td> <td class=valor>{$energia_total}</td></tr> <tr><td style='color: #375fb2'>{$x_consumo}: </td> <td class=valor>{$energia_consumo}</td></tr>"></div>
+         <div class="nombre_recurso energia">{$x_energia}</div>
+        <div class="cantidad_recurso energia">{$energia_sobrante}</div> 
+    
+        <a href="?core=shop"><div id="materia_oscura_top" class="tooltipted" title="{$x_materia} <hr> <table style='font-size:8pt;'><tr><td><div class='materia_img'></div></td><td style='color: #375fb2'>{$x_mo}</td></tr><tr><td style='color: #375fb2'>{$x_actual}: </td> <td class=valor>{$materia}</td></tr> <tr><td style='color: #375fb2'>{$x_capacidad}: </td> <td class=valor>&infin;</td></tr>"></div></a>
+        <div class="cantidad_recurso materia">{$materia}</div>
+        
+        <a href="?core=overview">
+            <div id="small_planeta" class="tooltipted" title="{$nombre_planeta} <hr /> <center> [{$p}:{$s}] </center>"><img width="163" height="163" src="styles/xnova/images/planetas/{$imagen_planeta}.png" /></div>
+        </a> 
+        <div class="coord_p"><strong>O:</strong>{$p} :: <strong>S:</strong>{$s}</div>
+
+</nav>
+<div id="paginas">

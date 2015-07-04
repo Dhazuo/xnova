@@ -1,0 +1,14 @@
+<div id="cargando"></div>
+<table id="estadisticas">
+    <thead>
+    <tr>
+        <th>{{ x_top }}</th>
+        <th>{{ x_jugador }}</th>
+        <th>{{ x_puntos }}</th>
+        <th>{{ x_alianza }}</th>
+        <th>{{ x_faccion }}</th>
+        <th>{{ x_acciones }}</td>
+    </tr>
+    </thead>
+    <tbody>
+        

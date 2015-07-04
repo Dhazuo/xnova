@@ -1,0 +1,38 @@
+{% set siguiente = sistema + 1 %}
+{% set anterior = sistema - 1 %}
+
+    
+   <div id="galaxia">
+    <div id="cajon_galaxia">
+        <div class="pixel"></div>
+         <div class="pixel2"></div>
+        <div class="pixel3"></div>
+        <div id="selector_galaxia">
+            <input type="text" id="sistema" value="{{ sistema }}">
+            <a href="" id="ir"><div id="boton_sistema">{{ x_ir }}</div></a>
+            <a href="core.php?view=universo&sistema={{ anterior }}" name="{{ anterior }}">
+                <div id="anterior_sistema" class="tooltip" title="{{ x_anterior }}"></div>
+            </a>
+            
+            <a href="core.php?view=universo&sistema={{ siguiente }}" name="{{ siguiente }}">
+                <div id="siguiente_sistema" class="tooltip" title="{{ x_siguiente }}"></div>
+            </a>
+            <div id="cargando" class="cargando_galaxia"></div>
+        </div>    
+        <script>
+        $('#ir').click(function(){
+            var $selector = $('#sistema').val();
+            location.href = 'core.php?view=universo&sistema=' + $selector;
+            return false;
+        });
+        </script>
+                
+        <!--            
+    <table>
+        <tr>
+            <th>{{ x_orbita }}</th>
+            <th>Imagen</th>
+            <th>{{ x_planeta }}</th>
+            <th>{{ x_emperador }}</th>
+            <th>{{ x_accion }}</th>
+        </tr> -->

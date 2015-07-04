@@ -1,0 +1,12 @@
+{include 'overall/header.xnv'}
+        <div id="cargando"></div>
+        <div id="error"></div>
+        <form action="?core=index&mode=login" method="POST" id="iniciar_sesion">         
+            <label>{$x_user}</label><input type="text" name="user" required="required" />
+            <label>{$x_pass}</label><input type="password" name="pass" required="required" />
+            <label><input type="checkbox" name="sesion" value="1" />{$x_recordar}</label>
+            <input type="hidden" name="login" value="1" />
+            <input type="submit" value="{$x_submit}" id="login" />
+        </form>
+    <a href="?core=index&mode=reg">Registro</a>
+{include 'overall/footer.xnv'}

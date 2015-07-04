@@ -1,0 +1,11 @@
+{include 'overall/header.xnv'}
+        <div id="cargando"></div>
+        <div id="error"></div>
+        <form action="?core=index&mode=reg" method="POST" id="registro_usuario">
+            <label>{$x_user} </label><input type="text" name="user" maxlength="16" required="required" /><br />
+            <label>{$x_pass} </label><input type="password" name="pass" required="required" /><br />
+            <label>{$x_email} </label><input type="email" name="email" required="required" /><br />
+            <input type="hidden" name="faccion" value="1" />
+            <input type="submit" value="{$x_registrarme}" id="registrar" /> 
+        </form>
+{include 'overall/footer.xnv'}

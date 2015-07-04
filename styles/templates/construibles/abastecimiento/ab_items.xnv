@@ -1,0 +1,39 @@
+        <div class="item_abastecimiento">
+         <form action="core.php?view=abastecimiento&id={{ id }}" method="POST">
+            <div class="titulo_item">
+                <a href="#{{ id }}" class="ve{{ id }}"><span class="a">{{ nombre }}</span></a>
+                <span class="b">{{ nivel|raw }}</span>
+            </div>
+            
+            <a href="#{{ id }}" class="ve{{ id }}">
+                <img class="img_abas" src="estilos/xnova/images/construibles/{{ imga }}.jpg" width="78" height="78" />
+            </a>
+            
+            {{ destruir|raw }}
+            {{ enviar|raw }}
+                
+            <span class="tiempo_construccion_abas">{{ tiempo|raw }}</span>
+            <span class="tiempo_destruccion_abas">{{ tiempo_destruccion|raw }}</span>
+
+                <div class="costes_abas">
+                    <div class="tooltipted coste_metal" title="{{ c_metal }}"></div>
+                    <div class="tooltipted coste_cristal" title="{{ c_cristal }}"></div>
+                    <div class="tooltipted coste_tritio" title="{{ c_tritio }}"></div>
+                    <div class="tooltipted coste_materia" title="{{ c_materia }}"></div>
+                    <img src="estilos/xnova/images/recursos/{{ precios }}.png" />
+                </div> 
+            </form>
+        </div>
+
+        <script type="text/javascript"> 
+            $('.ve{{ id }}').click(function(){
+            $('#info{{ id }}').simplePopup();
+            });
+        </script> 
+
+        <div id="info{{ id }}" class="simplePopup">
+           <div class="img_pop">
+               <img class="img_abas" src="estilos/xnova/images/construibles/{{ imga }}.jpg" width="170" height="170" />                </div>
+           <div class="nombre_pop">{{ nombre }}</div>
+           {{ desc|raw }}
+        </div>

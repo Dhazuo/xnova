@@ -1,0 +1,9 @@
+
+        <div class="tooltip planetas_g planeta_{{ posicion }}" title="<img class='planeta_prev' src='estilos/xnova/images/planetas/{{ imagen }}.png' width='40' height='40' /> <strong>{{ nombre }}</strong><hr /><strong>O:</strong> {{ posicion }} <strong>S:</strong> {{ sistema }}<br /> {{ usuario }} {{ accion }}" data-tipped-options="position: 'bottom'" >
+            <img class="planetica" src="estilos/xnova/images/planetas/{{ imagen }}.png" />
+            <p class="{{ habitado }}">[{{ posicion }}:{{ sistema }}]</p>
+            <img class="lunas" src="estilos/xnova/images/luna_{{ luna }}.png" />
+            <img class="escombros" src="estilos/xnova/images/escombros_{{ escombros }}.png" />
+        </div>
+        
+        

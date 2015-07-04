@@ -1,0 +1,1185 @@
+/**
+ _  \_/ |\ | /¯¯\ \  / /\6
+ ¯  /¯\ | \| \__/  \/ /--\Core.
+ * @author: Copyright (C) 2015 by Brayan Narvaez (Prinick) developer of xNova Revolution and Xnova
+ * @author web: http://www.prinick.com
+ * Todos los derechos reservados para éste código y tódo el núcleo del sistema
+ * general.css estilo general que abarca prácticamente todo el juego
+*/
+
+/*
+
+.titulo esta en abastecimiento, pasarlo a class generales
+
+*/
+
+body {
+    background:url(../images/bg.jpg) no-repeat fixed #0c111d;
+    background-size:cover;
+    color: #bbbbbb;
+    line-height:1;
+    font-size: 9pt;
+    font-family: Verdana;
+    height: 100%; 
+}
+
+.nombre_pop {
+    border-bottom: 2px solid #000;
+    position: absolute;
+    text-align: center;
+    font-weight: bold;
+    color: #345aff;
+    padding: 5px;
+    width: 496px;
+    background: url('../images/navegacion/bg_ti.png') repeat-x;
+    margin: -205px 0px 0px -6px;
+}
+.d_p {
+    position: absolute;
+    padding: 5px;
+    width: 305px;
+    min-height: 160px;
+    max-height: auto;
+    background: -moz-linear-gradient(top, #171f2f 0%, #0b0d13 100%); 
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#171f2f), color-stop(100%,#0b0d13)); 
+    background: -webkit-linear-gradient(top, #171f2f 0%,#0b0d13 100%); 
+    background: -o-linear-gradient(top, #171f2f 0%,#0b0d13 100%); 
+    background: -ms-linear-gradient(top, #171f2f 0%,#0b0d13 100%); 
+    background: linear-gradient(to bottom, #171f2f 0%,#0b0d13 100%); 
+    font-size: 8pt;
+    color: #98999a;
+    border: 1px solid #000;
+    margin: -178px 0px 0px 178px; 
+}
+
+.s_p {
+    padding: 5px;
+    width: 482px;
+    max-height: auto;
+    background: #0e111a;
+    font-size: 8pt;
+    color: #b3512a;
+    border: 1px solid #000;
+    margin: 0px 0px 3px 0px;   
+}
+
+.cerrar_pop {
+    z-index: 100;
+    width: 20px;
+    height: 17px;
+    cursor: pointer;
+    position: absolute;
+    margin: 3px 0px 0px 475px;
+    background: url('../images/navegacion/x.png') no-repeat;
+}
+.cerrar_pop:hover {
+    background-position: 0px -17px;
+}
+
+.img_pop {
+    margin: 20px 0px 0px 0px;
+    width: 170px;
+    height: 185px; 
+}
+
+.img_pop img {
+    position: absolute;
+    margin: 07px 0px 0px 0px;
+}
+
+.simplePopup {
+    display:none;
+    border: 2px solid #01030f;
+    background: rgba(11, 16, 26, 0.59);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#171f2f', endColorstr='#0b0d13',GradientType=0 ); 
+    z-index:3;
+    padding: 0px 0px 2px 6px;
+    width:500px;
+    min-width:500px;
+    color: #bbbbbb;
+}
+
+.simplePopupBackground {
+    display:none;
+    background:#041027;
+    position:fixed;
+    height:100%;
+    width:100%;
+    top:0;
+    left:0;
+    z-index:1;
+}
+
+aside#header {
+    width: 163px;
+    height: 86px;
+    background: url('../images/navegacion/menu.png') no-repeat;
+}
+
+aside#botones_topnav {
+    position: absolute;
+    margin: -4px 0px 0px 50px;
+    height: 43px;
+    width: 902px;
+}
+aside#botones_topnav ul {
+    list-style: none;
+}
+aside#botones_topnav ul a li {
+    float: left;
+}
+.boton_topnav {
+    background: url('../images/navegacion/topnav_botones.png') no-repeat;
+    width: 62px;
+    height: 41px;
+}
+.vision_general {
+    margin-left: -40px;
+    background-position: 0px -41px;
+}
+.vision_general:hover {
+    background-position: 0px 0px;
+}
+.abastecimiento {
+    margin-left: 62px;
+    background-position: -62px -41px;
+}
+.abastecimiento:hover {
+    background-position: -62px 0px;
+}
+.infraestructuras {
+    margin-left: 62px;
+    background-position: -124px -41px;
+}
+.infraestructuras:hover {
+    background-position: -124px 0px;
+}
+.tecnologia {
+    margin-left: 282px;
+    background-position: -186px -41px;
+}
+.tecnologia:hover {
+    background-position: -186px 0px;
+}
+.hangar {
+    margin-left: 62px;
+    background-position: -248px -41px;
+}
+.hangar:hover {
+    background-position: -248px 0px;
+}
+.defensas {
+    margin-left: 62px;
+    background-position: -310px -41px;
+}
+.defensas:hover {
+    background-position: -310px 0px;
+}
+
+div#mensajes_menu {
+    position: absolute;
+    margin: 08px 0px 0px 10px;
+    width: 52px;
+    height: 35px;
+    background: url('../images/navegacion/mensja.png') no-repeat;
+}
+div#mensajes_menu:hover {
+    background: url('../images/navegacion/mensja.png') 0px -35px no-repeat; 
+}
+
+div#mensajes_menu_cant {
+    text-align: center;
+    position: absolute;
+    font-size: 6pt;
+    width: 60px;
+    max-width: 60px;
+    margin: 45px 0px 0px 5px;
+}
+
+div#hora {
+    position: absolute;
+    margin: 61px 0px 0px 20px;
+    color: #687078;
+    padding: 2px 0px;
+    text-align: center;
+    border: 1px solid #010306;
+    background: #080b12;
+    width: 120px;
+    font-size: 8pt;
+}
+
+div#leftmenu {
+    position: absolute;
+    margin: 67px 0px 0px 0px;
+}
+
+aside#menu {
+    width: 161px;
+    height: auto;
+    margin: -17px 0px 0px 2px;
+    background: url('../images/navegacion/menu.gif') repeat-y;
+}
+
+aside#foot_menu {
+   width: 165px;
+   height: 16px;
+   margin: -14px 0px 0px 0px;
+   background: url('../images/navegacion/menu.png') 0px -86px no-repeat;
+}
+
+div#notas_version {
+    position: absolute;
+    margin: 2px 0px 0px 25px;
+    width: 117px;
+    height: 15px;
+    background: #020516;
+    border: 1px solid #0b269b;
+    color: #0b37bc;
+    text-align: center;
+    font-size: 8pt;
+    line-height: 15px;
+    -webkit-transition: background .5s ease .2s;
+    -moz-transition: background .5s ease .2s;
+    -op-transition: background .5s ease .2s;
+    -ms-transition: background .5s ease .2s
+}
+div#notas_version:hover {
+    color: #020516;
+    background: #0b37bc;
+    border: 1px solid #020516;
+}
+
+ul#botones {
+    list-style: none;
+}
+
+ul#botones li {
+    font-size: 8pt;
+    width: 161px;
+    height: 23px;
+    text-align: center;
+    margin: 0px 0px -13px -41px;
+    color: #8c96a1;
+    background: url('../images/navegacion/boton.gif') 0px -23px no-repeat;
+}
+
+ul#botones li:hover {
+    color: #c7d5e5;
+    background: url('../images/navegacion/boton.gif') 0px 0px no-repeat;
+}
+
+ul#botones li p {
+    line-height: 23px;
+}
+
+.separador {
+    width: 162px;
+    height: 9px;
+    margin: 0px 0px -14px -40px;
+    background: url('../images/navegacion/separador.gif') no-repeat;    
+}
+
+nav#topnav {
+    top: 0;
+    margin: -8px 0px 0px 10px;
+    background: url('../images/navegacion/topnav.png') no-repeat;
+    width: 1002px;
+    height: 161px;
+}
+
+.recursos{
+    position: absolute;
+    width: 45px;
+    height: 31px;
+    background: url('../images/navegacion/recursos.png') no-repeat;
+}
+
+.metal_img {
+    margin: 75px 0px 0px 230px;
+    background-position: 0px 0px;
+}
+
+.cristal_img {
+    margin: 75px 0px 0px 327px;
+    background-position: -45px 0px;
+}
+
+.tritio_img {
+    margin: 75px 0px 0px 630px;
+    background-position: -90px 0px;
+}
+
+.energia_img {
+    margin: 75px 0px 0px 729px;
+    background-position: -135px 0px;
+}
+
+.materia_img {
+    width: 45px;
+    height: 31px;
+    background: url('../images/navegacion/recursos.png') -180px 0px no-repeat;
+}
+
+.coord_p {
+    font-size: 8pt;
+    position: absolute;
+    width: 107px;
+    text-align: center;
+    margin: 115px 0px 0px 450px;
+}
+
+.cantidad_recurso {
+    margin-top: 107px;
+    position: absolute;
+    font-size: 7pt;
+    width: 60px;
+    text-align: center;
+}
+
+#small_planeta{
+    cursor: pointer;
+    position: absolute;
+    margin: -50px 0px 0px 420px;
+}
+
+.nombre_recurso {
+    background: #080b12;
+    border: 1px solid #010306;
+    padding: 0px 1px;
+    margin-top: 120px;
+    position: absolute;
+    font-size: 7pt;
+    width: 60px;
+    text-align: center;
+}
+
+.metal {    margin-left: 220px; color: #6f7552   }
+
+.cristal {    margin-left: 317px; color: #5574a7   }
+
+.tritio {    margin-left: 620px; color: #4e8c7c   }
+
+.energia {    margin-left: 722px; color: #e6921a   }
+
+.materia {    margin-left: 835px; color: #375fb2   }
+
+#materia_oscura_top{
+    position: absolute;
+    cursor: pointer;
+    margin: 60px 0px 0px 815px;
+    width: 100px;
+    height: 65px;
+}
+
+canvas{
+	display:block;
+	vertical-align:bottom;
+}
+
+.pixel {
+    background: url('../images/star.gif') no-repeat;
+    width: 10px;
+    height: 10px;
+    margin: 50px 0px 0px 530px;
+    position: absolute;
+}
+.pixel2 {
+    background: url('../images/star2.gif') no-repeat;
+    width: 10px;
+    height: 10px;
+    margin: 350px 0px 0px 125px;
+    position: absolute;
+}
+.pixel3 {
+    background: url('../images/star3.gif') no-repeat;
+    width: 10px;
+    height: 10px;
+    margin: 300px 0px 0px 680px;
+    position: absolute;
+}
+
+#particles-js{
+    margin: -15px 0px 0px -15px;
+	width:120%;
+	height:110%;
+    position: fixed;
+    background: rgba(16, 22, 38, 0.76);
+}
+
+input {
+    background: #101626;
+    color: #bbbbbb;
+    border: 1px solid #0c111d;
+    -webkit-transition: background .5s ease .2s;
+    -moz-transition: background .5s ease .2s;
+    -op-transition: background .5s ease .2s;
+    -ms-transition: background .5s ease .2s
+}
+
+a {
+    color: #c3cede;
+    text-decoration: none;
+    -webkit-transition: color .5s ease .2s;
+    -moz-transition: color .5s ease .2s;
+    -op-transition: color .5s ease .2s;
+    -ms-transition: color .5s ease .2s
+} 
+a:hover {
+     color: #a2be21;
+}
+
+div#paginas {
+    margin: 20px 0px 0px 170px;
+    width: 756px;
+    max-width: 756px;
+}
+
+#cuerpo {
+    position: relative;
+    height: 100%;
+    margin: 0 auto 50px auto;
+    width: 1024px;
+    max-width: 1024px;
+}
+
+#footer {
+    width: 1024px;
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+footer {
+    position: fixed;
+    margin: -20px 0px 0px -9px;
+    width: 100%;
+    height: 20px;
+    background: url('../images/navegacion/footer.gif') repeat-x;
+    color: #505560;
+    bottom: 0;
+    font-size: 8pt;
+}
+
+footer div#copyright {
+    line-height: 20px;
+    margin-left: 10px;
+    float: left;
+}
+
+footer div#foot_enlaces {
+    line-height: 20px;
+    margin-right: 10px;
+    float: right;
+}
+
+td.valor {
+    text-align: right;
+}
+
+hr {
+    border: 1px solid #375fb2;
+}
+
+div#cajon_galaxia {
+    background: url('../images/bg_galaxia.png') no-repeat;
+    margin-top: -35px;
+    width: 733px;
+    height: 416px;
+}
+
+div#selector_galaxia {
+    position: absolute;
+    margin: 11px 0px 0px 20px;
+}
+
+#sistema {
+    border: 1px solid #04060b;
+    color: #809ce1;
+    background: #0b0e16;
+    text-align: center;
+    width: 50px;
+    height: 20px;
+}
+
+div#boton_sistema {
+    background: url('../images/navegacion/galaxia_selector.gif') no-repeat;
+    width: 74px;
+    height: 24px;
+    line-height: 23px;
+    padding: 0px 0px 0px 9px;
+    position: absolute;
+    margin: -25px 0px 0px 60px;
+}
+div#boton_sistema:hover {
+    background-position: 0px -24px;
+    color: #8ebefe;
+}
+div#anterior_sistema {
+    background: url('../images/navegacion/galaxia_selector.gif') -105px 0px no-repeat;
+    width: 21px;
+    height: 24px;
+    position: absolute;
+    margin: -25px 0px 0px 150px;
+}
+div#anterior_sistema:hover {
+    background-position: -105px -24px;
+    color: #8ebefe;
+}
+div#siguiente_sistema {
+    background: url('../images/navegacion/galaxia_selector.gif') -84px 0px no-repeat;
+    width: 21px;
+    height: 24px;
+    position: absolute;
+    margin: -25px 0px 0px 175px;
+}
+div#siguiente_sistema:hover {
+    background-position: -84px -24px;
+    color: #8ebefe;
+}
+.cargando_galaxia {
+    position: absolute;
+    margin: -22px 0px 0px 210px;
+}
+
+.planeta_prev {
+    position: absolute;
+    margin: 0px 0px 0px 130px;
+}
+
+.planetas_g {
+    cursor: pointer;
+}
+
+p.habitado {
+    font-size: 8pt;
+    color: #a5cafc;
+}
+p.deshabitado {
+    font-size: 8pt;
+    color: #54575d;
+}
+
+.planeta_1 img.planetica {
+    position: absolute;
+    margin: 168px 0px 0px 281px;
+    width: 20px;
+    height: 20px;
+}
+.planeta_1 p {
+    position: absolute;
+    text-align: right;
+    width: 51px;
+    margin: 172px 0px 0px 227px;
+}
+.planeta_1 img.lunas {
+    position: absolute;
+    margin: 155px 0px 0px 265px;
+}
+.planeta_1 img.escombros {
+    position: absolute;
+    margin: 156px 0px 0px 244px; 
+}
+
+
+.planeta_2 img.planetica {
+    position: absolute;
+    margin: 182px 0px 0px 465px;
+    width: 20px;
+    height: 20px;
+}
+.planeta_2 p.deshabitado {
+    position: absolute;
+    text-align: center;
+    color: #7c7979;
+    width: 51px;
+    margin: 169px 0px 0px 449px;
+}
+.planeta_2 p.habitado {
+    position: absolute;
+    text-align: center;
+    color: #a5cafc;
+    width: 51px;
+    margin: 169px 0px 0px 449px;
+}
+.planeta_2 img.lunas {
+    position: absolute;
+    margin: 152px 0px 0px 475px;
+}
+.planeta_2 img.escombros {
+    position: absolute;
+    margin: 153px 0px 0px 454px; 
+}
+
+
+.planeta_3 img.planetica {
+    position: absolute;
+    margin: 204px 0px 0px 314px;
+    width: 22px;
+    height: 22px;
+}
+.planeta_3 p.deshabitado {
+    position: absolute;
+    text-align: right;
+    color: #7c7979;
+    width: 51px;
+    margin: 208px 0px 0px 260px;
+}
+.planeta_3 p.habitado {
+    position: absolute;
+    text-align: right;
+    color: #a5cafc;
+    width: 51px;
+    margin: 208px 0px 0px 260px;
+}
+.planeta_3 img.lunas {
+    position: absolute;
+    margin: 222px 0px 0px 298px; 
+}
+.planeta_3 img.escombros {
+    position: absolute;
+    margin: 223px 0px 0px 278px;
+}
+
+
+
+.planeta_4 img.planetica {
+    position: absolute;
+    margin: 189px 0px 0px 503px;
+    width: 23px;
+    height: 23px;
+}
+.planeta_4 p.deshabitado {
+    position: absolute;
+    text-align: left;
+    color: #7c7979;
+    width: 51px;
+    margin: 194px 0px 0px 528px;
+}
+.planeta_4 p.habitado {
+    position: absolute;
+    text-align: left;
+    color: #a5cafc;
+    width: 51px;
+    margin: 194px 0px 0px 528px;
+}
+.planeta_4 img.lunas {
+    position: absolute;
+    margin: 207px 0px 0px 548px;
+}
+.planeta_4 img.escombros {
+    position: absolute;
+    margin: 208px 0px 0px 528px; 
+}
+
+
+
+.planeta_5 img.planetica {
+    position: absolute;
+    margin: 187px 0px 0px 195px;
+    width: 24px;
+    height: 24px;
+}
+.planeta_5 p {
+    position: absolute;
+    text-align: right;
+    width: 51px;
+    margin: 192px 0px 0px 140px;
+}
+.planeta_5 img.lunas {
+    position: absolute;
+    margin: 206px 0px 0px 177px;
+}
+.planeta_5 img.escombros {
+    position: absolute;
+    margin: 207px 0px 0px 157px;
+}
+
+
+.planeta_6 img.planetica {
+    position: absolute;
+    margin: 128px 0px 0px 300px;
+    width: 18px;
+    height: 18px;
+}
+.planeta_6 p {
+    position: absolute;
+    text-align: right;
+    width: 51px;
+    margin: 130px 0px 0px 247px;
+}
+.planeta_6 img.lunas {
+    position: absolute;
+    margin: 112px 0px 0px 283px;
+}
+.planeta_6 img.escombros {
+    position: absolute;
+    margin: 113px 0px 0px 263px; 
+}
+
+
+.planeta_7 img.planetica {
+    position: absolute;
+    margin: 229px 0px 0px 369px;
+    width: 32px;
+    height: 32px;
+}
+.planeta_7 p.deshabitado {
+    position: absolute;
+    text-align: center;
+    color: #7c7979;
+    width: 51px;
+    margin: 261px 0px 0px 358px;
+}
+.planeta_7 p.habitado {
+    position: absolute;
+    text-align: center;
+    color: #a5cafc;
+    width: 51px;
+    margin: 261px 0px 0px 358px;
+}
+.planeta_7 img.lunas {
+    position: absolute;
+    margin: 274px 0px 0px 383px;
+}
+.planeta_7 img.escombros {
+    position: absolute;
+    margin: 275px 0px 0px 363px;
+}
+
+
+
+.planeta_8 img.planetica {
+    position: absolute;
+    margin: 234px 0px 0px 218px;
+    width: 30px;
+    height: 30px;
+}
+.planeta_8 p {
+    position: absolute;
+    text-align: right;
+    width: 51px;
+    margin: 243px 0px 0px 164px;
+}
+.planeta_8 img.lunas {
+    position: absolute;
+    margin: 256px 0px 0px 202px;
+}
+.planeta_8 img.escombros {
+    position: absolute;
+    margin: 257px 0px 0px 182px;
+}
+
+
+.planeta_9 img.planetica {
+    position: absolute;
+    margin: 122px 0px 0px 472px;
+    width: 15px;
+    height: 15px;
+}
+.planeta_9 p {
+    position: absolute;
+    text-align: left;
+    width: 51px;
+    margin: 124px 0px 0px 488px;
+}
+.planeta_9 img.lunas {
+    position: absolute;
+    margin: 104px 0px 0px 505px;
+}
+.planeta_9 img.escombros {
+    position: absolute;
+    margin: 107px 0px 0px 485px; 
+}
+
+
+.planeta_10 img.planetica {
+    position: absolute;
+    margin: 236px 0px 0px 581px;
+    width: 36px;
+    height: 36px;
+}
+.planeta_10 p {
+ 
+    position: absolute;
+    text-align: center;
+    width: 51px;
+    margin: 271px 0px 0px 573px;
+}
+.planeta_10 img.lunas {
+    position: absolute;
+    margin: 285px 0px 0px 600px;
+}
+.planeta_10 img.escombros {
+    position: absolute;
+    margin: 286px 0px 0px 580px;
+}
+
+
+.planeta_11 img.planetica {
+    position: absolute;
+    margin: 245px 0px 0px 92px;
+    width: 39px;
+    height: 39px;
+}
+.planeta_11 p {
+    position: absolute;
+    text-align: right;
+    width: 51px;
+    margin: 260px 0px 0px 37px;
+}
+.planeta_11 img.lunas {
+    position: absolute;
+    margin: 273px 0px 0px 70px;
+}
+.planeta_11 img.escombros {
+    position: absolute;
+    margin: 274px 0px 0px 50px;
+}
+
+
+.planeta_12 img.planetica {
+    position: absolute;
+    margin: 284px 0px 0px 305px;
+    width: 50px;
+    height: 50px;
+}
+.planeta_12 p {
+    position: absolute;
+    text-align: center;
+    width: 51px;
+    margin: 335px 0px 0px 304px;
+}
+.planeta_12 img.lunas {
+    position: absolute;
+    margin: 349px 0px 0px 330px;
+}
+.planeta_12 img.escombros {
+    position: absolute;
+    margin: 349px 0px 0px 310px;
+}
+
+
+.planeta_13 img.planetica {
+    position: absolute;
+    margin: 335px 0px 0px 560px;
+    width: 65px;
+    height: 65px;
+}
+.planeta_13 p {
+    position: absolute;
+    text-align: right;
+    width: 51px;
+    margin: 360px 0px 0px 506px;
+}
+.planeta_13 img.lunas {
+    position: absolute;
+    margin: 374px 0px 0px 540px;
+}
+.planeta_13 img.escombros {
+    position: absolute;
+    margin: 375px 0px 0px 520px;
+}
+
+
+.planeta_14 img.planetica {
+    position: absolute;
+    margin: 57px 0px 0px 124px;
+    width: 19px;
+    height: 19px;
+}
+.planeta_14 p {
+    position: absolute;
+    text-align: left;
+    width: 51px;
+    margin: 58px 0px 0px 143px;
+}
+.planeta_14 img.lunas {
+    position: absolute;
+    margin: 72px 0px 0px 165px;
+}
+.planeta_14 img.escombros {
+    position: absolute;
+    margin: 73px 0px 0px 145px;
+}
+
+
+
+.planeta_15 img.planetica {
+    position: absolute;
+    margin: 65px 0px 0px 575px;
+    width: 19px;
+    height: 19px;
+}
+.planeta_15 p {
+    position: absolute;
+    text-align: left;
+    width: 51px;
+    margin: 66px 0px 0px 595px;
+}
+.planeta_15 img.lunas {
+    position: absolute;
+    margin: 80px 0px 0px 615px;  
+}
+.planeta_15 img.escombros {
+    position: absolute;
+    margin: 80px 0px 0px 595px;
+}
+
+#abastecimiento_bg {
+    position: absolute;
+    background: url('../images/navegacion/constr/bg_edif.png') no-repeat;
+    width: 592px;
+    height: 439px;
+    margin: -35px 0px 0px 18px;
+}
+
+#abastecimiento_log {
+    position: absolute;
+    background: url('../images/navegacion/constr/abastecimiento.png') no-repeat;
+    width: 94px;
+    height: 40px;
+    margin: 377px 0px 0px 526px;
+}
+
+#abastecimiento_bg_inter {
+    width: 578px;
+    height: 410px;
+    margin: 19px 0px 0px 10px;
+    padding: 0px 12px 0px 17px;
+}
+
+#instalaciones_log {
+    position: absolute;
+    background: url('../images/navegacion/constr/instalaciones.png') no-repeat;
+    width: 94px;
+    height: 40px;
+    margin: 377px 0px 0px 526px;
+}
+
+#cola_actual {
+    position: absolute;
+    margin: 410px 0px 0px 40px;
+    background: url('../images/navegacion/constr/bg_actual.png') no-repeat;
+    width: 226px;
+    height: 108px;
+}
+
+.img_actual {
+    position: absolute;
+    margin: 20px 0px 0px 15px;
+}
+
+.nombre_actual {
+    color: #acbb5c;
+    position: absolute;
+    width: 125px;
+    font-size: 8pt;
+    text-align: center;
+    margin: 45px 0px 0px 91px;
+}
+
+.tiempo_actual {
+    position: absolute;
+    width: 125px;
+    text-align: center;
+    font-size: 8pt;
+    margin: 58px 0px 0px 91px;
+}
+
+.tiempo_ajax {
+   position: absolute;
+   background: url('../images/navegacion/ajax-loader.gif') no-repeat;
+   width: 15px;
+   height: 15px;
+   margin: 80px 0px 0px 200px; 
+}
+
+.edif_colas {
+   position: absolute;
+   margin: -420px 0px 0px 575px;
+}
+
+.edif_colas img  {
+    margin-bottom: 10px;
+}
+
+.nada_construyendo {
+   position: absolute;
+   width: 145px;
+   text-align: center;
+   font-size: 8pt;
+   padding: 3px;
+   color: #bbbbbb;
+   background: #090b12;
+   border: 1px solid #010306;
+   margin: 50px 0px 0px 45px; 
+}
+
+.subiendo, .bajando {
+    position: absolute;
+    width: 37px;
+    height: 28px;
+    margin: 43px 0px 0px 34px;
+}
+
+.subiendo {
+    background: url('../images/navegacion/constr/subiendo.png') no-repeat;
+}
+
+.bajando {
+    background: url('../images/navegacion/constr/bajando.png') no-repeat;
+}
+
+.titulo {
+    color: #2545cc;
+    width: 259px;
+    text-align: center;
+    font-size: 7pt;
+    position: absolute;
+    margin: 4px 0px 0px 24px
+}
+
+.item_abastecimiento {
+    background: url('../images/navegacion/constr/bg_item.png') no-repeat;
+    width: 168px;
+    height: 80px;
+    margin-top: 17px;
+    margin-right: 18px;
+    float: left;
+}
+
+.img_abas {
+    border: 1px solid black;
+}
+
+.titulo_item {
+    position: absolute;
+    height: 13px;
+    width: 168px;
+    background: url('../images/navegacion/constr/niveles.png') no-repeat;
+    line-height: 13px;
+    color: #9dab55;
+    font-size: 7pt;
+}
+
+.titulo_item a span.a { position: absolute;  margin-left: 12px; color: #9dab55  }
+.titulo_item span.b { 
+    position: absolute;
+    margin-left: 114px;
+    width: 45px;
+    text-align: right;
+}
+
+.tiempo_construccion_abas {
+    position: absolute;
+    font-size: 7pt;
+    margin: 16px 0px 0px 10px;
+}
+
+.tiempo_destruccion_abas {
+    position: absolute;
+    font-size: 7pt;
+    margin: 30px 0px 0px 10px;
+}
+
+.coste_metal, .coste_cristal, .coste_tritio, .coste_materia {
+    position: absolute;
+    width: 30px;
+    height: 15px;
+}
+
+.coste_metal {
+    margin: -1px 0px 0px -5px;
+}
+
+.coste_cristal {
+   margin: -1px 0px 0px 28px; 
+}
+
+.coste_tritio {
+    margin: 18px 0px 0px -5px; 
+}
+
+.coste_materia {
+   margin: 18px 0px 0px 28px;   
+}
+
+
+.destruir, .construir, .destruir_no, .construir_no {
+    position: absolute;
+    margin-top: 65px;
+    width: 22px;
+    height: 18px;
+    border: none;
+    cursor: pointer;
+}
+
+.destruir:hover , .construir:hover, .destruir_no:hover, .construir_no:hover {
+    margin-top: 64px;
+}
+
+.destruir, .destruir_no {
+    margin-left: -80px;
+}
+
+.construir, .construir_no {
+    margin-left: -23px;
+}
+
+.destruir {
+    background: url('../images/navegacion/destruir.png') no-repeat;
+}
+
+.construir {
+    background: url('../images/navegacion/construir.png') no-repeat;
+}
+
+.destruir_no {
+     background: url('../images/navegacion/destruir_red.png') no-repeat;
+}
+
+.construir_no {
+     background: url('../images/navegacion/construir_red.png') no-repeat;
+}
+
+.costes_abas {
+    position: absolute;
+    margin: -40px 0px 0px 92px;
+}
+
+.hangares {
+    position: absolute;
+    margin: 55px 0px 0px -80px;
+    width: 60px;
+    height: 13px;
+    line-height: 13px;
+    font-size: 8pt;
+    color: #a5cafc;
+    padding-left: 2px;
+    background: #07090f;
+    border: 1px solid #000;
+}
+.construir_nav_no, .construir_nav {
+    position: absolute;
+    margin-top: 55px;
+    margin-left: -20px;
+    width: 22px;
+    height: 17px;
+    border: none;
+    cursor: pointer; 
+}
+.construir_nav {
+    background: url('../images/navegacion/construir_nav.png');
+}
+.construir_nav_no {
+    background: url('../images/navegacion/construir_nav_red.png');
+}
+.cantidad_cola {
+    padding: 2px;
+    border: 1px solid #030407;
+    border-radius: 7px;
+    position: absolute;
+    margin: -22px 0px 0px 25px;
+    font-size: 6pt;
+    color: #d1d12c;
+    background: #0b0d13;
+}

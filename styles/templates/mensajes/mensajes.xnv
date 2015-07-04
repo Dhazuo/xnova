@@ -1,0 +1,12 @@
+  <table>
+      <tr>
+        <th>{{ tipo }}</th>
+        <th>De {{ creador }}</th>
+        <th>El {{ fecha }}</th>
+      </tr>
+      <tr>
+        <td colspan="3">{{ contenido }}</td>
+      </tr>
+  </table>
+    
+{% include 'overall/footer.xnv' %}

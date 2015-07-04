@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Xnova - CHANGELOG</title>
+    <meta charset="utf-8" />
+</head>
+<body style="background:#42557d;color:#dcecff;font-family: Verdana; font-size: 9pt;">
+    <table style="width:500px;margin:0px auto;">
+        <thead style="text-align:center;background:#1e283d;">
+            <tr>
+                <th style="border:1px solid #404d69;width:120px;">VERSIÓN</th>
+                <th style="border:1px solid #404d69;">DESCRIPCIÓN</th>
+            </tr>
+        </thead>
+        <tbody style="background:#2d416a;">
+            <tr>
+                <td style="border:1px solid #404d69;text-align:center;">                 
+                    <p>v0.1</p>
+                </td>
+                <td style="border:1px solid #404d69;padding:6px;">
+                    <ul>
+                        <li>Producción de recursos</li>
+                        <li>Módulo Vision General</li>
+                        <li>Módulo Universo</li>
+                        <li>Módulo Mensajes</li>
+                        <li>Módulo Abastecimiento</li>
+                        <li>Módulo Infraestructura</li>
+                        <li>Módulo Comerciante</li>
+                        <li>Módulo Tecnología</li>
+                        <li>Módulo Hangar</li>
+                        <li>Módulo Defensas</li>
+                        <li>Módulo Flotas</li>
+                        <li>Módulo Alianzas</li>
+                        <li>Módulo Casino</li>
+                        <li>Módulo Tienda</li>
+                        <li>Módulo Colegas</li>
+                        <li>Módulo Estadísticas</li>
+                        <li>Módulo Buscar</li>
+                        <li>Módulo Changelog</li>
+                        <li>Módulo Opciones</li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+        <table style="width:500px;margin:0px auto;">
+        <thead style="text-align:center;background:#1e283d;">
+            <tr>
+                <th style="border:1px solid #404d69;">DESARROLLO Y DERECHOS DE AUTOR</th>
+            </tr>
+        </thead>
+        <tbody style="background:#2d416a;">
+            <tr>
+                <td style="border:1px solid #404d69;text-align:center;padding:6px;">  
+                    <p>PHP, HTML5, AJAX</p>
+                    <p>Desarrollo, Diseño y Mantenimiento por <a style="color:#dcecff" href="http://www.prinick.com" target="_blank"><strong>Brayan Narváez (Prinick)</strong></a></p>
+                    <p>Traducción de textos español-inglés por <strong>Carlos Verde (Techiend)</strong></p>
+                    <p>Copyright 2015 &copy; Todos los derechos reservados</p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    
+    
+</body>
+    
+</html>
