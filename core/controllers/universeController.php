@@ -108,6 +108,7 @@ class universeController {
               }
             $x++; //bucle increment
         }
+        $db->close();
         $template = new Smarty();
         $template->assign(array(
             'sistema' => $this->system_id,
