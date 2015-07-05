@@ -1,0 +1,35 @@
+   <div id="galaxia">
+    <div id="cajon_galaxia">
+        <div class="pixel"></div>
+         <div class="pixel2"></div>
+        <div class="pixel3"></div>
+        <div id="selector_galaxia">
+            <input type="text" id="sistema" value="{$sistema}">
+            <a href="" id="ir"><div id="boton_sistema">{$x_ir}</div></a>
+            <a href="?core=universe&sistema={$sistema - 1}" name="{$sistema - 1}">
+                <div id="anterior_sistema" class="tooltip" title="{$x_anterior}"></div>
+            </a>
+            <a href="?core=universe&sistema={$sistema + 1}" name="{$sistema + 1}">
+                <div id="siguiente_sistema" class="tooltip" title="{$x_siguiente}"></div>
+            </a>
+            <div id="cargando" class="cargando_galaxia"></div>
+        </div>    
+        <script>
+        $('#ir').click(function(){
+            var $selector = $('#sistema').val();
+            location.href = '?core=universe&sistema=' + $selector;
+            return false;
+        });
+        </script>
+        {foreach from=$universe item=uni}
+        <div class="tooltip planetas_g planeta_{$uni.posicion}" title="<img class='planeta_prev' src='styles/xnova/images/planetas/{$uni.imagen}.png' width='40' height='40' /> <strong>{$uni.nombre}</strong><hr /><strong>O:</strong> {$uni.posicion} <strong>S:</strong> {$sistema}<br /> {$uni.usuario}<br /> {$uni.accion}" data-tipped-options="position: 'bottom'">
+            <img class="planetica" src="styles/xnova/images/planetas/{$uni.imagen}.png" />
+            <p class="{$uni.habitado}">[{$uni.posicion}:{$sistema}]</p>
+            <img class="lunas" src="styles/xnova/images/luna_{$uni.luna}.png" />
+            <img class="escombros" src="styles/xnova/images/escombros_{$uni.escombros}.png" />
+        </div>
+        {/foreach}
+</div> 
+</div>
+
+{include 'overall/footer.xnv'}

@@ -15,22 +15,17 @@ require('core/models/class.Connect.php');
 require('core/libs/SmartyEngine/Smarty.class.php');
 require('lang/es.php');
 
-if (isset($_GET['core'],$_SESSION['user']) and file_exists("core/controllers/".$_GET['core']."Controller.php")) {
-    
+if(isset($_SESSION['user'],$_SESSION['id_planet'],$_SESSION['id'])) {
     $id_user = $_SESSION['id'];
     $id_planet = $_SESSION['id_planet'];
-    include("core/controllers/".$_GET['core']."Controller.php");
-    $class = $_GET['core'] . 'Controller';
-    $view = $class::xnova();
-    
-} else if ((!isset($_GET['core']) and isset($_SESSION['user'])) or 
-           (isset($_GET['core']) and isset($_SESSION['user']) 
-            and !file_exists("core/controllers/".$_GET['core']."Controller.php"))) {
-    include("core/controllers/overviewController.php");
-    $view = overviewController::xnova();
-} else if (isset($_GET['core'],$_GET['mode']) and !isset($_SESSION['user'])) {
-    include("core/controllers/indexController.php");
-    $view = indexController::xnova();
+    if(isset($_GET['core']) and file_exists("core/controllers/".$_GET['core']."Controller.php")) {
+        include("core/controllers/".$_GET['core']."Controller.php");
+        $class = $_GET['core'] . 'Controller';
+        $view = $class::xnova();
+    } else {
+        include("core/controllers/overviewController.php");
+        $view = overviewController::xnova();
+    }
 } else {
     include("core/controllers/indexController.php");
     $view = indexController::xnova();

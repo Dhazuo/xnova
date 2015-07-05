@@ -28,7 +28,6 @@ class indexController {
                 } else {
                     $lng = new Lang();
                     $template = new Smarty();
-                    $template->caching = true;
                     $template->assign(array(
                         'x_user' => $lng->x_user,
                         'x_pass' => $lng->x_pass,
@@ -41,7 +40,6 @@ class indexController {
             default:
                 $lng = new Lang();
                 $template = new Smarty();
-                $template->caching = true;
                 $template->assign(array(
                     'x_user' => $lng->x_user,
                     'x_pass' => $lng->x_pass,

@@ -37,7 +37,6 @@ class Topnav {
             $energia_sobrante = number_format($planet->EnergiaSobrante(),'0',',','.');
         }
             $template = new Smarty();
-            $template->caching = true;
             $template->assign(array(
             'm_general' => $lng->m_general,
             'm_abastecimiento' => $lng->m_abastecimiento,

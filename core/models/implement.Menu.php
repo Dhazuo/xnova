@@ -16,7 +16,6 @@ class Menu {
             $lng = new Lang();           
             $usuario = new User($id_user);
             $template = new Smarty();
-            $template->caching = true;
             $template->assign(array(
                 'm_flotas' => $lng->m_flotas,
                 'm_universo' => $lng->m_universo,

@@ -37,7 +37,6 @@ class overviewController {
         $total_rank = $db->recorrer($sql);
         $db->liberar($sql);
         $template = new Smarty();
-        $template->caching = true;
         $template->assign(array(
             'usuario_email' => $user->UserEmail(),
             'usuario_faccion' => $user->UserFaction(),
