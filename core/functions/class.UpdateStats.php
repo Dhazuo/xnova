@@ -20,11 +20,13 @@ class UpdateStats {
         }
             $timer = time() + (30);
             $query = $db->query("UPDATE generales SET ultima_act='$timer' LIMIT 1;");
+            $prepare_query->close();
             unset($actualizar,$tops,$timer,$tope,$query);
     } else {
         unset($actualizacion);
     } 
-    $db->liberar($act);    
+    $db->liberar($act);  
+    $db->close();
   }   
 }
 

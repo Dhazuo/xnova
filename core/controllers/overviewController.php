@@ -9,7 +9,6 @@
  * overview Controller: controlador de la visión general del juego
 */
 
-
 class overviewController {    
     
     private static $instance;
@@ -36,6 +35,7 @@ class overviewController {
         $sql = $db->query("SELECT COUNT(*) id FROM usuarios;");
         $total_rank = $db->recorrer($sql);
         $db->liberar($sql);
+        $db->close();
         $template = new Smarty();
         $template->assign(array(
             'usuario_email' => $user->UserEmail(),
@@ -51,7 +51,7 @@ class overviewController {
             'nombre_planeta' => $planet->PlanetName(),
             'imagen_planeta' => $planet->PlanetImage()
         ));
-        $template->display('overview/overview.xnv'); 
+        $template->display('overview/overview.xnv');
     }
     
     public static function xnova() {

@@ -1,5 +1,14 @@
 <?php
 
+/**
+ _  \_/ |\ | /¯¯\ \  / /\6
+ ¯  /¯\ | \| \__/  \/ /--\Core.
+ * @author: Copyright (C) 2015 by Brayan Narvaez (Prinick) developer of xNova Revolution and Xnova
+ * @author web: http://www.prinick.com
+ * Todos los derechos reservados para éste código y tódo el núcleo del sistema
+ * universe Controller: controlador de la vista del universo 
+*/
+
 class universeController {
     
     private static $instance;
@@ -31,15 +40,28 @@ class universeController {
         unset($system,$sql);
         
         $x = 1;
-        while ($x<16) {
-            $sql = $db->query("SELECT SQL_BIG_RESULT DISTINCT id_planeta, pos, nombre, imagen, usuario, id_dueno 
+        $psql = "SELECT SQL_BIG_RESULT DISTINCT id_planeta, pos, nombre, imagen, usuario, id_dueno 
             FROM planetas JOIN usuarios 
-            ON planetas.id_dueno=usuarios.id WHERE sistema='$this->system_id' 
-            AND pos='$x' ORDER BY pos ASC LIMIT 1;");
-            $rec = $db->recorrer($sql);
-            $o_s = "&o=$x&s=$this->system_id";
-            $db->liberar($sql);
-             if($x != $rec['pos']) {
+            ON planetas.id_dueno=usuarios.id WHERE sistema=? 
+            AND pos=? ORDER BY pos ASC LIMIT 1;";
+        $prepare_sql = $db->prepare($psql);
+        $prepare_sql->bind_param('ii',$orbit,$system_id);
+        while ($x<16) { 
+            $orbit = $x; 
+            $system_id = $this->system_id;
+            $prepare_sql->execute();
+            
+            $id_planeta = '';
+            $pos = '';
+            $nombre = '';
+            $imagen = '';
+            $usuario = '';
+            $id_dueno = '';
+            
+            $prepare_sql->bind_result($id_planeta,$pos,$nombre,$imagen,$usuario,$id_dueno);
+            $prepare_sql->fetch();
+             $o_s = "&o=$x&s=$this->system_id";
+             if($x != $pos) {
                     if($x == 1 or $x == 5 or $x == 9 or $x == 13) {
                         $universe[] = array(
                             'posicion' => $x,
@@ -64,24 +86,24 @@ class universeController {
                         );   
                     }
                 } else {
-                    if($rec['id_dueno'] == $id_user and $rec['id_planeta'] != $id_planet ) {
+                    if($id_dueno == $id_user and $id_planeta != $id_planet ) {
                        $universe[] = array(
-                        'posicion' => $rec['pos'],
-                        'nombre' => $rec['nombre'],
-                        'imagen' => $rec['imagen'],
-                        'usuario' => $rec['usuario'],
+                        'posicion' => $pos,
+                        'nombre' => $nombre,
+                        'imagen' => $imagen,
+                        'usuario' => $usuario,
                         'escombros' => 'no_es',
                         'luna' => 'no_es',     
                         'habitado' => 'habitado',
                         'accion' => '<a href=\'?view=flotas&mision=transportar'. $o_s .'\'>'. $lng->x_transportar .'</a> |
                                     <a href=\'?view=flotas&mision=desplegar'. $o_s .'\'>'. $lng->x_desplegar .'</a>'
                         );
-                    } else if ($rec['id_planeta'] == $id_planet and $rec['id_dueno'] == $id_user) {
+                    } else if ($id_planeta == $id_planet and $id_dueno == $id_user) {
                         $universe[] = array(
-                        'posicion' => $rec['pos'],
-                        'nombre' => $rec['nombre'],
-                        'imagen' => $rec['imagen'],
-                        'usuario' => $rec['usuario'],
+                        'posicion' => $pos,
+                        'nombre' => $nombre,
+                        'imagen' => $imagen,
+                        'usuario' => $usuario,
                         'escombros' => 'no_es',
                         'luna' => 'no_es',     
                         'habitado' => 'habitado',
@@ -89,10 +111,10 @@ class universeController {
                         ); 
                     } else {
                         $universe[] = array(
-                        'posicion' => $rec['pos'],
-                        'nombre' => $rec['nombre'],
-                        'imagen' => $rec['imagen'],
-                        'usuario' => $rec['usuario'],
+                        'posicion' => $pos,
+                        'nombre' => $nombre,
+                        'imagen' => $imagen,
+                        'usuario' => $usuario,
                         'escombros' => 'no_es',
                         'luna' => 'no_es',     
                         'habitado' => 'habitado',
@@ -105,9 +127,10 @@ class universeController {
                                     <a href=\'?view=flotas&mision=sac'. $o_s .'\'>'. $lng->x_sac .'</a>'
                         ); 
                     }
-              }
+            }   
             $x++; //bucle increment
         }
+        $prepare_sql->close();
         $db->close();
         $template = new Smarty();
         $template->assign(array(
