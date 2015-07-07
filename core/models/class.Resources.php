@@ -53,7 +53,7 @@ class Resources extends Production {
         
         $tiempo = time();
         $time = $tiempo - $dat['ultima_act'];
-        parent::__construct($time,$niveles,$dat['fuente_base'],$dat['temp_promd']);
+        parent::__construct($time,$niveles,$dat['fuente_base'],$dat['temp_promd'],$this->tritio);
         
         $prod_metal = $this->metal >= $this->getMetalCapacity() ? 0 : $this->getMetalProd();
         $prod_cristal = $this->cristal >= $this->getCristalCapacity() ? 0 : $this->getCristalProd();
@@ -70,7 +70,7 @@ class Resources extends Production {
             
         $db->liberar($sql,$update);     
         $db->close();       
-        unset($prod_metal,$prod_cristal,$prod_tritio,$tiempo,$db,$planeta);
+        unset($prod_metal,$prod_cristal,$prod_tritio,$tiempo,$db);
     }    
     
     public function ProdResources() {
