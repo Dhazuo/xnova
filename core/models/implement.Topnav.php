@@ -16,26 +16,22 @@ class Topnav {
         $planet = new Planet($id_planet,$id_user);
         $lng = new Lang();
         
-        if ($planet->AlmacenMetal()['capacidad'] <= $planet->Metal()) {
-            $metal = '<span style="color: red;">'. number_format($planet->Metal(),'0',',','.') . '</span>';
-        } else {
-            $metal = number_format($planet->Metal(),'0',',','.');
-        }
-        if ($planet->AlmacenCristal()['capacidad'] <= $planet->Cristal()) {
-            $cristal = '<span style="color: red;">' . number_format($planet->Cristal(),'0',',','.') . '</span>';
-        } else {
-            $cristal = number_format($planet->Cristal(),'0',',','.');
-        }
-        if ($planet->AlmacenTritio()['capacidad'] <= $planet->Tritio()) {
-            $tritio = '<span style="color: red;">' . number_format($planet->Tritio(),'0',',','.') . '</span>';
-        } else {
-            $tritio = number_format($planet->Tritio(),'0',',','.');
-        }
-        if ($planet->EnergiaSobrante() < 0) {
-            $energia_sobrante = '<span style="color: red;">' . number_format($planet->EnergiaSobrante(),'0',',','.') . '</span>';
-        } else {
-            $energia_sobrante = number_format($planet->EnergiaSobrante(),'0',',','.');
-        }
+        $metal = $planet->ProdResources()['metal'] == 0 
+            ? '<span style=\'color: red;\'>'. number_format($planet->PlanetMetal(),'0',',','.') . '</span>' 
+            : number_format($planet->PlanetMetal(),'0',',','.');
+        
+        $cristal = $planet->ProdResources()['cristal'] == 0
+            ? '<span style=\'color: red;\'>' . number_format($planet->PlanetCristal(),'0',',','.') . '</span>'
+            : number_format($planet->PlanetCristal(),'0',',','.');
+        
+        $tritio = $planet->ProdResources()['tritio'] == 0
+            ? '<span style=\'color: red;\'>' . number_format($planet->PlanetTritio(),'0',',','.') . '</span>'
+            : number_format($planet->PlanetTritio(),'0',',','.');
+
+        $energia_sobrante = $planet->EnergiaSobrante() < 0
+            ? '<span style=\'color: red;\'>' . number_format($planet->EnergiaSobrante(),'0',',','.') . '</span>'
+            : number_format($planet->EnergiaSobrante(),'0',',','.');
+
             $template = new Smarty();
             $template->assign(array(
             'm_general' => $lng->m_general,
@@ -57,7 +53,7 @@ class Topnav {
             'energia_sobrante' => $energia_sobrante,
             'x_materia' => $lng->x_materia,
             'x_mo' => $lng->x_mo,
-            'materia' => number_format($planet->MateriaOscura(),'0',',','.'),
+            'materia' => number_format($planet->PlanetDarkMatter(),'0',',','.'),
             'p' => $planet->PlanetOrbit(),
             's' => $planet->PlanetSystem(),
             'nombre_planeta' => $planet->PlanetName(),
@@ -66,10 +62,10 @@ class Topnav {
             'x_capacidad' => $lng->x_capacidad,
             'x_produccion' => $lng->x_produccion,
             'x_consumo' => $lng->x_consumo,
-            'almacen_cristal' => number_format($planet->AlmacenCristal()['capacidad'],0,',','.'),
-            'almacen_metal' => number_format($planet->AlmacenMetal()['capacidad'],0,',','.'),
-            'almacen_tritio' => number_format($planet->AlmacenTritio()['capacidad'],0,',','.'),
-            'almacen_materia' => $lng->x_infinito  #AUN NO SE HA CREADO EN CLASS LANG EN 
+            'almacen_cristal' => number_format($planet->AlmacenCristal(),0,',','.'),
+            'almacen_metal' => number_format($planet->AlmacenMetal(),0,',','.'),
+            'almacen_tritio' => number_format($planet->AlmacenTritio(),0,',','.'),
+            'almacen_materia' => $lng->x_infinito 
         ));
         $template->display('overall/topnav.xnv'); 
     }

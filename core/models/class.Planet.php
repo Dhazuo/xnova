@@ -13,59 +13,77 @@ require ('core/models/class.Resources.php');
 
 class Planet extends Resources {
     
-    protected $name;
-    protected $image;
-    protected $fields;
-    protected $used_fields;
-    protected $temperature;
-    protected $orbit;
-    protected $solar;
+    private $planet;
     
     public function __construct($id_planet) {
         parent::__construct($id_planet);
         $db = new Connect();
-        $sql = $db->query("SELECT imagen,nombre,campos,campos_usados,temperatura,pos,sistema FROM planetas 
-                            WHERE id_planeta='$id_planet' LIMIT 1;");
+        $sql = $db->query("SELECT imagen,nombre,campos,campos_usados,temperatura,pos,sistema,metal,cristal,tritio,materia
+        FROM planetas WHERE id_planeta='$id_planet' LIMIT 1;");
         $planeta = $db->recorrer($sql);
-        $this->image = $planeta['imagen'];
-        $this->name = $planeta['nombre'];
-        $this->fields = $planeta['campos'];
-        $this->used_fields = $planeta['campos_usados'];
-        $this->temperature = $planeta['temperatura'];
-        $this->orbit = $planeta['pos'];
-        $this->solar = $planeta['sistema'];
+        
+        $this->planet = array(
+            'image' => $planeta['imagen'],
+            'name' => $planeta['nombre'],
+            'fields' => $planeta['campos'],
+            'used_fields' => $planeta['campos_usados'],
+            'temperature' => $planeta['temperatura'],
+            'orbit' => $planeta['pos'],
+            'solar' => $planeta['sistema'],
+            'metal' => $planeta['metal'],
+            'cristal' => $planeta['cristal'],
+            'tritio' => $planeta['tritio'],
+            'matter' => $planeta['materia']  
+        );
+        
         $db->liberar($sql);
         $db->close();
         unset($planeta,$db,$sql);
     }
     
+    public function PlanetMetal() { 
+        return floor($this->planet['metal']);   
+    }  
+       
+    public function PlanetCristal() {  
+        return floor($this->planet['cristal']);  
+    }  
+    
+    public function PlanetTritio() {
+        return floor($this->planet['tritio']);     
+    }
+    
+    public function PlanetDarkMatter() {    
+        return floor($this->planet['matter']);   
+    }
+    
     public function PlanetImage() {
-        return $this->image;
+        return $this->planet['image'];
     }
     
     public function PlanetName() {
-        return $this->name;
+        return $this->planet['name'];
     }
     
     public function PlanetFields() {
-        return $this->used_fields.' / ' .$this->fields;
+        return $this->planet['used_fields'] . ' / ' . $this->planet['fields'];
     }
     
     public function PlanetDiameter() {
-        $diametro = $this->fields * 78;
+        $diametro = $this->planet['fields'] * 78;
         return number_format($diametro,0,',','.');
     }
     
     public function PlanetTemperature() {
-        return $this->temperature;
+        return $this->planet['temperature'];
     }
     
     public function PlanetOrbit() {
-        return $this->orbit;
+        return $this->planet['orbit'];
     }
     
     public function PlanetSystem() {
-        return $this->solar;
+        return $this->planet['solar'];
     }
 }
 
