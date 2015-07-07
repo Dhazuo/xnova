@@ -68,8 +68,6 @@ class Resources extends Production {
         $update = $db->query("UPDATE planetas SET ultima_act='$tiempo', metal= metal + '$prod_metal', 
         cristal= cristal + '$prod_cristal', tritio= tritio + '$prod_tritio' WHERE id_planeta='$this->id'");  
             
-        $sql2 = $db->query("SELECT metal,cristal,tritio,materia FROM planetas WHERE id_planeta='$this->id' LIMIT 1;");
-        $planeta = $db->recorrer($sql2);
         $db->liberar($sql,$update);     
         $db->close();       
         unset($prod_metal,$prod_cristal,$prod_tritio,$tiempo,$db,$planeta);
