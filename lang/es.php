@@ -121,190 +121,152 @@ class Lang {
     *   Llamados en class.Minas.php
     *   La estructura es array('Nombre', 'Descripción');
     */
-    public $db_mina_metal = 'Mina de Metal';
-    public $x_mina_metal = array(
-    'Mina de Metal', 
-    '<div class="d_p">
+    public $mina_metal_name = 'Mina de Metal';
+    public $mina_metal_desc = '<div class=\'d_p\'>
     El metal es el recurso más básico para un imperio emergente, las minas de metal se encargan de extraer este mineral que permite la construcción de edificaciones y naves. 
     <br /><br /> 
     Es el mineral más barato disponible, puesto que requiere poca energía y costo su extracción, además de ser abundante.       <br /><br /> 
     Se encuentra en las profundidades de la superficie terrestre, cada nivel de la mina de metal conduce a minas cada vez más profundas que puede extraer más mineral, evidentemente utilizando más energía para funcionar.
-    </div>'
-    );
-    public $db_mina_cristal = 'Mina de Cristal';
-    public $x_mina_cristal = array(
-    'Mina de Cristal',
-    '<div class="d_p">
+    </div>';
+        
+    public $mina_cristal_name = 'Mina de Cristal';
+    public $mina_cristal_desc = '<div class=\'d_p\'>
     El cristal es el segundo mineral más usado, generalmente se emplea en la construcción de circuitos electrónicos y ciertas aleaciones. 
     <br /><br />
     Las minas de cristal se encargan de perforar la superficie terrestre en busca de este mineral, su abundancia es grande pero no es basta como la del metal, por tanto cuesta el doble conseguirlo, el consumo de energía es exactamente el mismo que el de las minas de metal, cada nivel dota a las minas de mayor capacidad para explorar las profundidades en busca de este mineral.
-    </div>'
-    );
-    public $db_mina_tritio = 'Sintetizador de Tritio';
-    public $x_sintetizador = array(
-    'Sintetizador de Tritio',
-    '<div class="d_p">El tritio es un isótopo del hidrogeno: Los núcleos de hidrogeno contienen dos neutrones adicionales, es muy últil como combustile para naves por la gran cantidad de energía liberada de la reacción entre el deuterio y él mismo (Reacción DT), por lo que es una buena opción para abastecer de energía a planetas lejanos al sol.
+    </div>';
+    
+    public $mina_tritio_name = 'Sintetizador de Tritio';
+    public $mina_tritio_desc = '<div class=\'d_p\'>El tritio es un isótopo del hidrogeno: Los núcleos de hidrogeno contienen dos neutrones adicionales, es muy últil como combustile para naves por la gran cantidad de energía liberada de la reacción entre el deuterio y él mismo (Reacción DT), por lo que es una buena opción para abastecer de energía a planetas lejanos al sol.
     <br /><br /> 
-    El tritio puede ser encontrado frecuentemente en las profundidades del mar, su peso molecular es alto, puesto que mejorar el sintetizador de tritio acelera la recolección y procesamiento de este isótopo. Mientras más frio es un planeta, más abundante es.</div>'
-    );
-    public $x_energia_base = array(
-    'Distribuidor Eléctrico',
-    '<div class="d_p">
+    El tritio puede ser encontrado frecuentemente en las profundidades del mar, su peso molecular es alto, puesto que mejorar el sintetizador de tritio acelera la recolección y procesamiento de este isótopo. Mientras más frio es un planeta, más abundante es.</div>';
+    
+    public $distribuidor_name = 'Distribuidor Eléctrico';
+    public $distribuidor_desc = '<div class=\'d_p\'>
     Es una plataforma encargada de distribuir la energía en todo el planeta, todo el cableado estructurado del planeta tiene como centro al distribuidor eléctrico.
     <br /><br />
     Éste, con grandes fuentes de poder puede producir una máxima cantidad de energía para abastecer el planeta, la energía que es capaz de producir tiene un límite de 600Mw, puesto que es indispensable conectarlo a algún sistema de producción de energía más productivo.
     <br /><br />
     El distribuidor es la espina dorsal de cualquier infraestructura planetaria.
     </div> 
-    <div class="s_p">Tiene un nivel fijo, no puede ser desmontado.</div>'
-    );
-    public $db_planta_energia = 'Planta de Energía Solar';
-    public $x_planta_solar = array(
-    'Planta de Energía Solar',
-    '<div class="d_p">
+    <div class=\'s_p\'>Tiene un nivel fijo, no puede ser desmontado.</div>';
+    public $planta_energia_name = 'Planta de Energía Solar';
+    public $planta_energia_desc = '<div class=\'d_p\'>
     La Planta de Energía Solar utiliza semiconductores de células fotovoltaicas, que convierten los fotones en corriente eléctrica, la producción de esta planta depende directamente de la distancia del planeta al sol. 
     <br /><br />
     Mientras más cercano sea, mayor será la productividad de la planta de energía solar, puesto que si el planeta recibe poca luz solar ésta no es la opción más indicada para establecer la infraestructura energética del planeta.
     </div>
-    <div class="s_p">Una vez sea construida, no puede ser desmontada y se perderá acceso al reactor de fusión en este planeta.</div>'
-    );
-    public $db_reactor_fusion = 'Reactor de Fusión';
-    public $x_reactor_fusion = array(
-    'Reactor de Fusión',
-    '<div class="d_p">
+    <div class=\'s_p\'>Una vez sea construida, no puede ser desmontada y se perderá acceso al reactor de fusión en este planeta.</div>';
+    
+    public $reactor_fusion_name = 'Reactor de Fusión';
+    public $reactor_fusion_desc = '<div class=\'d_p\'>
     Mediante el estudio de las partículas que originaron el universo, se descubrió que a su momento se generó una cantidad enorme de energía.
     <br /><br />
     Gracias a esto, se puede hacer recreaciones a escala de lo sucedido en este evento y aprovechar la energía que emanan las partículas resultantes de la colisión acelerada de partículas de tritio a velocidades extremadamente altas.
     <br /><br />
     Es una alternativa para los planetas muy alejados del sol, la producción de energía mediante este método es bastante alta y utiliza el tritio como combustible.
     </div>
-    <div class="s_p">Una vez sea construido, no puede ser desmontado y se perderá acceso a la energía solar en este planeta.</div>' 
-    );
-    public $db_satelites = 'Satélite Solar';
-    public $x_satelite_solar = array(
-    'Satélite Solar',
-    '<div class="d_p">
+    <div class=\'s_p\'>Una vez sea construido, no puede ser desmontado y se perderá acceso a la energía solar en este planeta.</div>';
+    
+    public $satelites_name = 'Satélite Solar';
+    public $satelites_desc = '<div class=\'d_p\'>
     Los científicos descubrieron un método para transmitir energía eléctrica al planeta utilizando satélites especialmente diseñados en una órbita geosincrónica.
     <br /><br />
     Los satélites solares recogen la energía solar y la transmiten a los paneles de la planta de energía solar usando una tecnología láser avanzada.
     <br /><br />
     La eficiencia de un satélite solar depende de la fuerza de la radiación solar recibida. En principio, la producción de energía en órbitas más cercanas al sol es mayor que en las órbitas distantes al sol.
     </div>
-    <div class="s_p">Son muy frágiles y pueden ser destruidos fácilmente en batallas.
-    </div>'
-    );
-    public $db_modulos = 'Módulo Acelerador';
-    public $x_modulo_acelerador = array(
-    'Módulo Acelerador',
-    '<div class="d_p">
+    <div class=\'s_p\'>Son muy frágiles y pueden ser destruidos fácilmente en batallas.
+    </div>';
+    
+    public $modulos_name = 'Módulo Acelerador';
+    public $modulos_desc = '<div class=\'d_p\'>
     Los modulos aceleradores se instalan en los colisionadores del reactor de fusión.
     <br /><br />
     Optimizan la obtención de energia de las partículas primordiales y redireccionan un porcentaje grande de la energia obtenida de vuelta al colisionador, por lo que permite obtener más energía de la misma cantidad de tritio.
-    </div>'
-    );
-    public $db_almacen_metal = 'Almacén de Metal';
-    public $x_almacen_metal = array(
-    'Almacén de Metal',
-    '<div class="d_p">
+    </div>';
+    
+    public $almacen_metal_name = 'Almacén de Metal';
+    public $almacen_metal_desc = '<div class=\'d_p\'>
     Bodegas enormes para almacenar metal sin procesar. Mientras más grande sea el almacén, más aumentará la capacidad de almacenaje del planeta.
     </div>
-    <div class="s_p">
+    <div class=\'s_p\'>
     La recolección de metal se detendrá cuando el almacén esté lleno.
-    </div>'
-    );
-    public $db_almacen_cristal = 'Almacén de Cristal';
-    public $x_almacen_cristal = array(
-    'Almacén de Cristal',
-    '<div class="d_p">
+    </div>';
+    
+    public $almacen_cristal_name = 'Almacén de Cristal';
+    public $almacen_cristal_desc = '<div class=\'d_p\'>
     Bodegas enormes para almacenar cristal sin procesar. Mientras más grande sea el almacén, más aumentará la capacidad de almacenaje.  
     </div>
-    <div class="s_p">La recolección de cristal se detendrá cuando el almacén esté lleno.
-    </div>'
-    );
-    public $db_almacen_tritio = 'Almacén de Tritio';
-    public $x_almacen_tritio = array(
-    'Almacén de Tritio',
-    '<div class="d_p">Contenedores enormes para almacenar tritio. Los contenedores se encuentran a menudo cerca del hangar. <br /><br />Los contenedores grandes son capaces de almacenar más tritio. 
+    <div class=\'s_p\'>La recolección de cristal se detendrá cuando el almacén esté lleno.
+    </div>';
+    
+    public $almacen_tritio_name = 'Almacén de Tritio';
+    public $almacen_tritio_desc ='<div class=\'d_p\'>Contenedores enormes para almacenar tritio. Los contenedores se encuentran a menudo cerca del hangar. <br /><br />Los contenedores grandes son capaces de almacenar más tritio. 
     </div>
-    <div class="s_p">La recolección de tritio se detendrá cuando el contenedor esté lleno.</div>'
-    );
-    public $x_almacen_materia = array(
-    'Almacén de Materia Oscura',
-    '<div class="d_p">Contenedores especializados para almacenar materia oscura, su capacidad es ilimitada.</div>
-    <div class="s_p">Tiene un nivel fijo, no puede ser desmontado.</div>'
-    );
+    <div class=\'s_p\'>La recolección de tritio se detendrá cuando el contenedor esté lleno.</div>';
+    
+    public $almacen_materia_name = 'Almacén de Materia Oscura';
+    public $almacen_materia_desc ='<div class=\'d_p\'>Contenedores especializados para almacenar materia oscura, su capacidad es ilimitada.</div>
+    <div class=\'s_p\'>Tiene un nivel fijo, no puede ser desmontado.</div>';
     
     /*
     *   Atributos de idioma instalaciones
     *   Llamados en class.Instalaciones.php
     *   La estructura es array('Nombre', 'Descripción');
     */
-    public $db_laboratorio = 'Laboratorio';
-    public $x_laboratorio = array(
-    'Laboratorio', 
-    '<div class="d_p">
+    public $laboratorio_name = 'Laboratorio'; 
+    public $laboratorio_desc = '<div class=\'d_p\'>
     Para poder investigar en nuevas áreas de una tecnología, se necesita un laboratorio de investigación planetario.
     <br /><br /> 
     El nivel de mejoras del laboratorio, no solo incrementa la velocidad a la que se descubren nuevas tecnologías, sino que también abre nuevos campos para investigar. Para conducir una investigación en el menor tiempo posible, todos los científicos del imperio son enviados al planeta donde se inició el trabajo de investigación. En cuanto el trabajo se haya completado, volverán a sus planetas y llevarán con ellos la nueva tecnología descubierta.
-    </div>'
-    );
-    public $db_nanobots = 'Nanobots';
-    public $x_nanobots = array(
-    'Nanobots', 
-    '<div class="d_p">
+    </div>';
+    
+    public $nanobots_name = 'Nanobots'; 
+    public $nanobots_desc = '<div class=\'d_p\'>
     Los nanobots son unidades robóticas minúsculas, con un tamaño medio de apenas unos pocos nanómetros. Estos microbios mecánicos son conectados en red y programados para una tarea de construcción, ofrecen una velocidad de producción realmente alta.
     <br /><br /> 
    Cada nivel de la fábrica de nanobots disminuye el tiempo de construcción de todas las edificaciones, naves y defensas.
-    </div>'
-    );
-    public $db_hangar = 'Hangar';
-    public $x_hangar = array(
-    'Hangar', 
-    '<div class="d_p">
+    </div>';
+    
+    public $hangar_name = 'Hangar'; 
+    public $hangar_desc = '<div class=\'d_p\'>
     El hangar planetario es responsable de la construcción de naves espaciales y sistemas de defensa. 
     <br /><br /> 
     Según va aumentando, puede producir una mayor variedad de naves a velocidades más altas. Si además existe una fábrica de nanobots en el planeta, la velocidad a la que se completan las unidades, aumenta considerablemente.
-    </div>'
-    );
-    public $db_silo = 'Silo';
-    public $x_silo = array(
-    'Silo', 
-    '<div class="d_p">
+    </div>';
+    
+    public $silo_name = 'Silo'; 
+    public $silo_desc = '<div class=\'d_p\'>
     El silo es un lugar de almacenamiento y lanzamiento de misiles planetarios. 
     <br /><br /> 
     Por cada nivel de tu silo, tienes espacio para 5 misiles interplanetarios o 10 misiles de intercepción. Es posible mezclar los tipos de misil; 1 interplanetario usa el espacio equivalente a 2 de intercepción.
-    </div>'
-    );
-    public $db_terraforming = 'Terraformer';
-    public $x_terraforming = array(
-    'Terraformer', 
-    '<div class="d_p">
+    </div>';
+    
+    public $terraforming_name = 'Terraformer'; 
+    public $terraforming_desc = '<div class=\'d_p\'>
     La pregunta sobre cómo disponer de más espacio para las estructuras en los planetas surgió durante el proceso de crecimiento de las infraestructuras de los mismos a través de las galaxias. Los métodos de construcción e ingenería tradicional eran insuficientes debido a la enorme necesidad de espacio edificable. 
     <br /><br /> 
     Un pequeño grupo de físicos de alta energía y nanotécnicos finalmente encontraron una solución: el Terraforming.
     <br />
     Usando grandes cantidades de energía se pueden hacer incluso continentes enteros. En este edificio se producen nanobots diseñados especialmente para asegurar la calidad y usabilidad de las areas formadas, cada nivel incrementa en 5 los campos disponibles.
     </div>
-    <div class="s_p">Una vez construido, el terraformer no puede ser desmontado.</div>'
-    );
-    public $db_central = 'Central de Comercio';
-    public $x_central = array(
-    'Central de Comercio', 
-    '<div class="d_p">
+    <div class=\'s_p\'>Una vez construido, el terraformer no puede ser desmontado.</div>';
+    
+    public $central_name = 'Central de Comercio'; 
+    public $central_desc = '<div class=\'d_p\'>
     La central de comercio es una edificación de oficinas encargada de mantener todas las relaciones comerciales de un planeta con el resto del universo, habilita todas las posibilidades de comercio exterior.
     </div>
-    <div class="s_p">Una vez construida, no puede ser desmontada. Máximo un nivel.</div>'
-    );
-    public $db_centro_rec = 'Centro de Reciclaje';
-    public $x_centro_rec = array(
-    'Centro de Reciclaje', 
-    '<div class="d_p">
+    <div class=\'s_p\'>Una vez construida, no puede ser desmontada. Máximo un nivel.</div>';
+    
+    public $centro_rec_name = 'Centro de Reciclaje';
+    public $centro_rec_desc = '<div class=\'d_p\'>
     El centro de reciclaje es una edificación que permite destruir naves y defensas para convertirlas en recursos nuevamente. 
     <br /><br />
     Cada nivel de el centro de reciclaje incrementa las ganancias obtenidas en un 10%.
     </div>
-    <div class="s_p">No es posible devolver deuterio.</div>'
-    );
+    <div class=\'s_p\'>No es posible devolver deuterio.</div>';
+    
 }
 
 ?>

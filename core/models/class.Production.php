@@ -20,16 +20,16 @@ class Production {
         $this->fuente_base = $base;
         $this->temp_promd = $temp;
         $this->nivel = array(
-            'metal' => $niveles[0],
-            'cristal' => $niveles[1],
-            'tritio' => $niveles[2],
-            'reactor' => $niveles[3],
-            'solar' => $niveles[4],
-            'satelites' => $niveles[5],
-            'modulos' => $niveles[6],
-            'a_metal' => $niveles[7],
-            'a_cristal' => $niveles[8],
-            'a_tritio' => $niveles[9]
+            'metal' => $niveles['mina_metal'],
+            'cristal' => $niveles['mina_cristal'],
+            'tritio' => $niveles['mina_tritio'],
+            'reactor' => $niveles['reactor_fusion'],
+            'solar' => $niveles['planta_energia'],
+            'satelites' => $niveles['satelites'],
+            'modulos' => $niveles['modulos'],
+            'a_metal' => $niveles['almacen_metal'],
+            'a_cristal' => $niveles['almacen_cristal'],
+            'a_tritio' => $niveles['almacen_tritio']
         );
         $this->tritio_actual = $tritio;
     }

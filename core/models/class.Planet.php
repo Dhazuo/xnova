@@ -85,6 +85,10 @@ class Planet extends Resources {
     public function PlanetSystem() {
         return $this->planet['solar'];
     }
+    
+    public function PlanetBuildsLeveles() {
+        return $this->GetLevels();
+    }
 }
 
 ?>
