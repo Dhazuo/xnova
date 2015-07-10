@@ -39,6 +39,9 @@ $provision = array(
         'cristal' => 30,
         'tritio' => 0,
         'materia' => 00,
+        'tech' => array(
+            'reactor_fusion' => 0
+        ),
         'price' => 1.5
     ),
     5 => array(
@@ -59,6 +62,9 @@ $provision = array(
         'cristal' => 35,
         'tritio' => 0,
         'materia' => 0,
+        'tech' => array(
+            'planta_energia' => 0
+        ),
         'price' => 1.51
     ),
     10 => array(
@@ -109,6 +115,10 @@ $provision = array(
         'cristal' => 1500,
         'tritio' => 500,
         'materia' => 0,
+        'tech' => array(
+            'planta_energia' => 5,
+            'hangar' => 1
+        ),
         'price' => null
     ),
     15 => array(
@@ -119,6 +129,9 @@ $provision = array(
         'cristal' => 1500,
         'tritio' => 500,
         'materia' => 0,
+        'tech' => array(
+            'reactor_fusion' => 7
+        ),
         'price' => null
     )
 );

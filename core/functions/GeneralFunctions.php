@@ -33,7 +33,7 @@ function FormatTimes($segs) {
 function BuildTime($metal,$cristal,$nano_lvl) {
     $time = (($metal + $cristal) / (BUILD_TIMES * 2500)) * (1 / ((1 + $nano_lvl) * pow(1.1,$nano_lvl))); 
     $time = floor(($time * 60 * 60));
-    return FormatTimes($time);
+    return $time;
 }
 
 function BuildPrice($metal,$cristal,$tritio,$materia,$factor,$lvl) {
@@ -43,6 +43,29 @@ function BuildPrice($metal,$cristal,$tritio,$materia,$factor,$lvl) {
     $materia = $materia == 0 ? 0 : floor($materia + pow($factor,$lvl));
     $price = array($metal,$cristal,$tritio,$materia);
     return $price;
+}
+
+function TechRequeriments($item,$compare) {
+    if(array_key_exists('tech',$item)) {
+        $technology = 0;
+        foreach($item['tech'] as $tech => $level) {
+            if($item['name'] == 'planta_energia' or $item['name'] == 'reactor_fusion') {
+                $compare[$tech] == $level ? $technology = $technology : ++$technology;
+            } else {
+                $compare[$tech] >= $level ? $technology = $technology : ++$technology;
+            }         
+        }
+    } else {
+        $technology = 0;
+    }
+    
+    if($technology > 0 or $item['name'] == 'almacen_materia' or $item['name'] == 'distribuidor' ) { 
+        unset($technology);
+        return false; 
+    } else { 
+        unset($technology);
+        return true; 
+    }
 }
 
 ?>

@@ -1,5 +1,5 @@
 <div id="abastecimiento_bg">
-    <div class="titulo">Abastecimiento</div>
+    <div class="titulo">{$abastecimiento}</div>
     <div id="abastecimiento_bg_inter">
      {foreach from=$building item=build}
       <div class="item_abastecimiento">
@@ -10,10 +10,11 @@
             </div>
             
             <a href="#{$build.id}" class="ve{$build.id}">
-                <img class="img_abas" src="styles/xnova/images/construibles/{$build.name}.jpg" width="78" height="78" />
+                <img class="img_abas" src="styles/xnova/images/construibles/{$build.image}.jpg" width="78" height="78" />
             </a>
             
-          <!-- CONSTRUIR O DESTRUIR -->
+            {$build.build}
+            {$build.destroy}
                 
             <span class="tiempo_construccion_abas">{$build.tiempo_c}</span>
             <span class="tiempo_destruccion_abas">{$build.tiempo_d}</span>
@@ -36,7 +37,7 @@
 
         <div id="info{$build.id}" class="simplePopup">
            <div class="img_pop">
-               <img class="img_abas" src="styles/xnova/images/construibles/{$build.name}.jpg" width="170" height="170" />                      </div>
+               <img class="img_abas" src="styles/xnova/images/construibles/{$build.image}.jpg" width="170" height="170" />                      </div>
            <div class="nombre_pop">{$build.name_lng}</div>
            {$build.desc_lng}
         </div>
