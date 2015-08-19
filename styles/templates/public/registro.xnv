@@ -1,11 +1,10 @@
 {include 'overall/header.xnv'}
-        <div id="cargando"></div>
-        <div id="error"></div>
-        <form action="?core=index&mode=reg" method="POST" id="registro_usuario">
-            <label>{$x_user} </label><input type="text" name="user" maxlength="16" required="required" /><br />
-            <label>{$x_pass} </label><input type="password" name="pass" required="required" /><br />
-            <label>{$x_email} </label><input type="email" name="email" required="required" /><br />
-            <input type="hidden" name="faccion" value="1" />
-            <input type="submit" value="{$x_registrarme}" id="registrar" /> 
-        </form>
+        <div id="_AJAX_"></div>
+            <label>{$x_user} </label><input type="text" id="user" maxlength="16" required="required" /><br />
+            <label>{$x_pass} </label><input type="password" id="pass" required="required" /><br />
+            <label>{$x_email} </label><input type="email" id="email" required="required" /><br />
+            <button type="button" id="send_request">{$x_registrarme}</button>
 {include 'overall/footer.xnv'}
+<script src="styles/xnova/js/controllers/regController.js"></script>
+</body>
+</html>

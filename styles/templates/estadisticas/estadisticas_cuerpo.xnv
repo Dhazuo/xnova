@@ -1,8 +1,0 @@
-<tr>
-    <td>{{ e_top }}</td>
-    <td><a href="core.php?view=universo&sistema={{ e_coordenadas }}">{{ e_user }}</a></td>
-    <td>{{ e_puntos }}</td>
-    <td>{{ e_alianza }}</td>
-    <td>{{ e_faccion }}</td>
-    <td>Accion</td>
-</tr>

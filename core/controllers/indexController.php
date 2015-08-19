@@ -22,7 +22,7 @@ class indexController {
                 $login->Login();
             break;
             case 'reg':
-                if(isset($_POST['faccion'])) {
+                if($_POST) {
                     $reg = new Access();
                     $reg->Register();
                 } else {
@@ -44,7 +44,9 @@ class indexController {
                     'x_user' => $lng->x_user,
                     'x_pass' => $lng->x_pass,
                     'x_recordar' => $lng->x_recordar,
-                    'x_submit' => $lng->x_submit
+                    'x_submit' => $lng->x_submit,
+                    'e_vacios' => $lng->e_datos_vac,
+                    'e_datos' => $lng->e_datos_inc
                 ));
                 $template->display('public/index.xnv');
             break;

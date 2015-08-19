@@ -6,7 +6,7 @@ class logoutController {
     
     private function __construct() {
         session_destroy();
-        unset($_SESSION);
+        unset($_SESSION['user'],$_SESSION['id_planet'],$_SESSION['id']);
         header('location: ?core=index');
     }
     

@@ -1,8 +1,0 @@
-</tbody>
-</table>
-{% if ver_mas is defined %}
-<a href="#" id="mostrar">{{ ver_mas }}</a>
-{% endif %}
-<br />
-
-{% include 'overall/footer.xnv' %}

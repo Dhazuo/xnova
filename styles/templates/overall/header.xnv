@@ -8,7 +8,10 @@
     <link rel="shortcut icon" href="favicon.ico" />
     <script src="styles/xnova/js/jquery.js"></script>
     <script src="styles/xnova/js/tipped.js"></script>
-    <script src="styles/xnova/js/xnova.ajax.js"></script>
+    <script src="styles/xnova/js/xnova.js"></script>
+    {if isset($smarty.get.core)}
+    <script src="styles/xnova/js/controllers/{$smarty.get.core}Controller.js"></script>
+    {/if}
 </head>
 <body>
 <div id="particles-js"></div>

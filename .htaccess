@@ -1,0 +1,8 @@
+ErrorDocument 401 /index.php?core=error
+ErrorDocument 403 /index.php?core=error
+ErrorDocument 404 /index.php?core=error
+ErrorDocument 500 /index.php?core=error
+<Files .htaccess>
+Order allow,deny
+Deny from all
+</Files>
