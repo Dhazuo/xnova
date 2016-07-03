@@ -1,0 +1,17 @@
+{
+    "name": "xnova/xnovarev",
+    "type": "library",
+    "description": "Xnova revolution",
+    "keywords": ["xnova","revolution"],
+    "homepage": "https://github.com/prinick96/xnova",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Brayan Narvaez",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0"
+    }
+}
